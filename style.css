@@ -3,6 +3,28 @@ html, body {
 }
 
 .container-fluid {
-  width: 800px;
-  background-color: red;
+	justify-content: center;
+}
+
+#social-container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#quote-box {
+	background-color: white;
+	padding: 30px;
+	width: 500px;
+	margin: auto;
+}
+
+
+h1 {
+	margin-bottom: 50px;
+	font-family: 'Pacifico', cursive;
+	font-size: 4em;
+}
+
+h2 {
+	font-family: 'Merriweather', serif;
 }
