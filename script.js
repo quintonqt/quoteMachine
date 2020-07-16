@@ -13,8 +13,27 @@ const authors = ["Eleanor Roosevelt", "William Shakespeare", "Mark Twain", "Walt
 
 function getQuoteAndAuthor() {
   var randomNumber = Math.floor(Math.random() * quotes.length);
-  document.getElementById('text').innerHTML = quotes[randomNumber];
-  document.getElementById('author').innerHTML = authors[randomNumber];
+  //document.getElementById('text').innerHTML = quotes[randomNumber];
+  //document.getElementById('author').innerHTML = authors[randomNumber];
+
+  $("#text").animate(
+    { opacity: 0 },
+    500,
+    function() {
+      $(this).animate({ opacity: 1}, 500);
+      $(this).text(quotes[randomNumber]);
+    }
+  );
+
+  $("#author").animate(
+    { opacity: 0 },
+    500,
+    function() {
+      $(this).animate({ opacity: 1}, 500);
+      $(this).html(authors[randomNumber]);
+    }
+  );
+
 }
 
 getQuoteAndAuthor();
